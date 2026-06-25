@@ -13,6 +13,45 @@ const MOBILE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
   document.querySelectorAll('[data-cursor]').forEach(el=>{el.addEventListener('mouseenter',()=>c.classList.add('hover'));el.addEventListener('mouseleave',()=>c.classList.remove('hover'));});
 })();
 
+/* ---------- mobile nav hamburger ---------- */
+(function(){
+  const burger = document.querySelector('.nav-burger');
+  const drawer = document.querySelector('.nav-drawer');
+  if(!burger || !drawer) return;
+
+  function openMenu(){
+    burger.classList.add('open');
+    drawer.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    burger.classList.remove('open');
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', () => {
+    burger.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  // Close on link click
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMenu);
+  });
+
+  // Close on outside tap
+  drawer.addEventListener('click', e => {
+    if(e.target === drawer) closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeMenu();
+  });
+})();
+
 function showFallback(){ const cv=document.getElementById('scene'); if(cv) cv.style.display='none'; }
 function perfTier(){
   const m=navigator.deviceMemory||4, c=navigator.hardwareConcurrency||4;
