@@ -303,15 +303,15 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
     <a href="#projects" data-cursor>Projects</a>
     <a href="#contact" data-cursor>Contact</a>
   </div>
-  <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation">
-  <a href="#about">About</a>
-  <a href="#work">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation">
+  <a href="#about" class="drawer-link">About</a>
+  <a href="#work" class="drawer-link">Experience</a>
+  <a href="#projects" class="drawer-link">Projects</a>
+  <a href="#contact" class="drawer-link">Contact</a>
 </div>
 
 <main>
