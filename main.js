@@ -391,4 +391,20 @@ addEventListener('load', () => {
   initHero();
   runPreloader();
   initAnimations();
+  initWhatsApp();
 });
+
+/* ─────────────────────────────────────────
+   WHATSAPP OBFUSCATION
+   Number is never in the DOM; assembled at
+   click-time only — not crawlable by bots.
+───────────────────────────────────────── */
+function initWhatsApp(){
+  const prefix = 'https://wa' + '.me/';
+  document.querySelectorAll('[data-wa]').forEach(el => {
+    el.addEventListener('click', () => {
+      const n = el.getAttribute('data-wa');
+      window.open(prefix + n, '_blank', 'noopener,noreferrer');
+    });
+  });
+}
