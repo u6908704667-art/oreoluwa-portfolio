@@ -214,7 +214,8 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
 .proj p{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:14px}
 .proj .stack{display:flex;flex-wrap:wrap;gap:7px}
 .proj .stack span{font-size:.7rem;color:var(--ink);opacity:.78;border:1px solid var(--line);padding:4px 9px;border-radius:30px}
-.proj-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:var(--gold);font-size:.82rem;font-family:'Space Grotesk';letter-spacing:.03em;position:relative;z-index:2}
+.proj-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:var(--gold);font-size:.82rem;font-family:'Space Grotesk';letter-spacing:.03em;position:relative;z-index:2;text-decoration:none;border-bottom:1px solid rgba(233,162,59,.0);transition:border-color .25s,gap .25s;cursor:pointer}
+.proj-link:hover{border-bottom-color:rgba(233,162,59,.6);gap:10px}
 .proj-link i{font-style:normal;transition:transform .4s}
 .proj:hover .proj-link i{transform:translate(4px,-4px)}
 .t-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
@@ -361,9 +362,11 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
 .tcard-stars{color:var(--gold);font-size:.78rem;letter-spacing:.08em}
 
 /* booking pill variant */
-.pill-booking{gap:12px;cursor:pointer}
+.pill-booking{gap:12px;cursor:pointer;transition:border-color .3s,background .3s}
+.pill-booking:hover{border-color:rgba(233,162,59,.55);background:rgba(233,162,59,.06)}
 .pill-booking .pill-sep{width:1px;height:14px;background:var(--line)}
-.pill-booking .book-cta{color:var(--gold);font-weight:600;font-size:.62rem;letter-spacing:.18em}
+.pill-booking .book-cta{color:var(--gold);font-weight:700;font-size:.62rem;letter-spacing:.18em;padding:3px 10px;border-radius:20px;border:1px solid rgba(233,162,59,.45);background:rgba(233,162,59,.08);transition:background .25s,border-color .25s,color .25s}
+.pill-booking:hover .book-cta{background:rgba(233,162,59,.22);border-color:var(--gold);color:#fff}
 
 /* counter skeleton — shows placeholder until JS fires */
 .stat .num[data-count]:empty::before,
@@ -503,7 +506,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>AI Content Repurposing Engine</h3>
             <p>n8n + OpenAI workflow turning one YouTube transcript into threads, posts &amp; captions, auto-scheduled via Buffer. ~2 hrs → under 3 min per video.</p>
             <div class="stack"><span>n8n</span><span>OpenAI</span><span>Webhook</span><span>Buffer</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/ai-content-engine" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
           <article class="proj batch" data-tilt data-cursor>
             <span class="proj-bar"></span>
@@ -511,7 +514,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>CivicPulse — Community Issue Tracker</h3>
             <p>A civic-tech platform where residents geo-tag local infrastructure problems (roads, power, water) and track government response in real time. Automated escalation to authorities via SMS &amp; email. Built to hold institutions accountable — designed to scale nationwide.</p>
             <div class="stack"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Twilio</span><span>Mapbox</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/civicpulse" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
           <article class="proj batch" data-tilt data-cursor>
             <span class="proj-bar"></span>
@@ -519,7 +522,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>Full-Stack Job Board</h3>
             <p>Companies post remote roles; candidates filter, bookmark &amp; apply with SendGrid alerts. Full-text search &amp; tag filtering on PostgreSQL.</p>
             <div class="stack"><span>React</span><span>Express</span><span>PostgreSQL</span><span>Render</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/job-board" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
           <article class="proj batch" data-tilt data-cursor>
             <span class="proj-bar"></span>
@@ -527,7 +530,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>MindBridge — AI Mental Health Companion</h3>
             <p>An anonymous, always-available AI companion for mental health check-ins, built for underserved communities with limited access to therapists. Mood tracking, weekly pattern reports, and crisis-detection that routes silently to human support. Architected to scale to millions at near-zero marginal cost.</p>
             <div class="stack"><span>Python</span><span>FastAPI</span><span>OpenAI</span><span>React</span><span>PostgreSQL</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/mindbridge" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
           <article class="proj batch" data-tilt data-cursor>
             <span class="proj-bar"></span>
@@ -535,7 +538,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>Discord Community Automation Suite</h3>
             <p>Discord + n8n bots automating onboarding, role assignment, event reminders &amp; a weekly digest for a 5,000+ member server. Manual mod work down ~70%.</p>
             <div class="stack"><span>Discord.js</span><span>n8n</span><span>OpenAI</span><span>Node.js</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/discord-automation-suite" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
           <article class="proj batch" data-tilt data-cursor>
             <span class="proj-bar"></span>
@@ -543,7 +546,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
             <h3>Real-Time Analytics Dashboard</h3>
             <p>Live KPI dashboard streaming metrics over WebSockets with animated charts, filters &amp; threshold alerts — built to monitor automations at a glance.</p>
             <div class="stack"><span>React</span><span>WebSocket</span><span>Chart.js</span><span>FastAPI</span></div>
-            <a class="proj-link">View project <i>↗</i></a>
+            <a class="proj-link" href="https://github.com/u6908704667-art/realtime-analytics-dashboard" target="_blank" rel="noopener">View on GitHub <i>↗</i></a>
           </article>
         </div>
       </div>
