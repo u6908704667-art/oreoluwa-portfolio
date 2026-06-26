@@ -3,8 +3,54 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Oreoluwa Adedeji — Engineer · Developer · AI Automation</title>
-<meta name="description" content="Portfolio of Oreoluwa Adedeji — full-stack developer, AI automation engineer, and builder of web apps, bots and integrations." />
+<title>Oreoluwa Adedeji — Full-Stack Developer & AI Automation Engineer</title>
+<meta name="description" content="Oreoluwa Adedeji — full-stack developer and AI automation engineer. I build web apps, AI systems, and automation pipelines that ship. Based in Abuja, open to remote work worldwide." />
+
+<!-- Open Graph / LinkedIn / WhatsApp / Slack previews -->
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://oreoluwa-portfolio-6.vercel.app/" />
+<meta property="og:title"       content="Oreoluwa Adedeji — Full-Stack Developer & AI Automation Engineer" />
+<meta property="og:description" content="I build web apps, AI bots, and automation pipelines that save teams 80% of manual work. 4+ years shipping real products. Open to remote freelance & full-time." />
+<meta property="og:image"       content="https://oreoluwa-portfolio-6.vercel.app/assets/portrait_sq.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name"   content="Oreoluwa Adedeji Portfolio" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="Oreoluwa Adedeji — Full-Stack Developer & AI Automation Engineer" />
+<meta name="twitter:description" content="I build web apps, AI bots, and automation pipelines that save teams 80% of manual work. Open to remote freelance & full-time." />
+<meta name="twitter:image"       content="https://oreoluwa-portfolio-6.vercel.app/assets/portrait_sq.jpg" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://oreoluwa-portfolio-6.vercel.app/" />
+
+<!-- Favicon — inline SVG (no extra file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23050507'/><text x='16' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='18' fill='%23e9a23b' text-anchor='middle'>OA</text></svg>" />
+
+<!-- JSON-LD structured data — Person schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Oreoluwa Adedeji",
+  "jobTitle": "Full-Stack Developer & AI Automation Engineer",
+  "description": "Full-stack developer and AI automation engineer with 4+ years building web apps, AI systems, and automation pipelines.",
+  "url": "https://oreoluwa-portfolio-6.vercel.app/",
+  "email": "Oreoluwarexxy15@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Abuja",
+    "addressCountry": "NG"
+  },
+  "knowsAbout": ["React", "Node.js", "Python", "n8n", "OpenAI API", "FastAPI", "PostgreSQL", "Discord bots", "AI Automation", "REST APIs"],
+  "sameAs": [
+    "https://t.me/Travis_on_sol",
+    "https://wa.me/2349157734298"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -279,6 +325,35 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
   .scroll-cue i,.pill i,.hero-portrait{animation:none!important}
   #scene{display:none}
 }
+
+/* ── TESTIMONIALS ── */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.tcard{background:rgba(13,13,18,.55);border:1px solid var(--line);border-radius:18px;padding:22px 20px 18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:12px;transition:transform .4s,border-color .4s}
+.tcard:hover{transform:translateY(-4px);border-color:rgba(233,162,59,.38)}
+.tcard-quote{color:var(--muted);font-size:.9rem;line-height:1.65;font-style:italic;position:relative;padding-left:16px}
+.tcard-quote:before{content:'"';position:absolute;left:0;top:-4px;font-size:1.8rem;color:var(--gold);line-height:1;font-style:normal;opacity:.7}
+.tcard-author{display:flex;align-items:center;gap:11px;margin-top:6px}
+.tcard-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,rgba(233,162,59,.3),rgba(255,122,43,.2));border:1px solid rgba(233,162,59,.35);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--gold);flex-shrink:0;letter-spacing:.02em}
+.tcard-meta{display:flex;flex-direction:column;gap:2px}
+.tcard-name{font-size:.84rem;font-weight:600;color:var(--ink)}
+.tcard-role{font-size:.72rem;color:var(--muted)}
+.tcard-stars{color:var(--gold);font-size:.78rem;letter-spacing:.08em}
+
+/* booking pill variant */
+.pill-booking{gap:12px;cursor:pointer}
+.pill-booking .pill-sep{width:1px;height:14px;background:var(--line)}
+.pill-booking .book-cta{color:var(--gold);font-weight:600;font-size:.62rem;letter-spacing:.18em}
+
+/* counter skeleton — shows placeholder until JS fires */
+.stat .num[data-count]:empty::before,
+.stat .num[data-count="0"]::before{content:attr(data-count) attr(data-suffix);opacity:.15}
+
+@media(max-width:860px){.testimonials{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .testimonials{grid-template-columns:1fr;gap:12px}
+  .tcard{padding:18px 16px 14px}
+  .tcard-quote{font-size:.85rem}
+}
 </style>
 </head>
 <body class="loading">
@@ -317,7 +392,7 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
 <main>
   <header class="hero" id="top">
     <div class="scrim"></div>
-    <div class="pill"><i></i> Available for freelance &amp; full-time</div>
+    <div class="pill pill-booking" onclick="window.open('https://calendly.com/oreoluwarexxy15','_blank')"><i></i> Available for freelance &amp; full-time <span class="pill-sep"></span><span class="book-cta">Book a call →</span></div>
     <div class="eyebrow">Engineer · Developer · AI Automation</div>
     <h1>
       <span class="line"><span>Oreoluwa</span></span>
@@ -358,10 +433,10 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
         </div></div>
         <div class="panel reveal" style="margin-top:24px">
           <div class="stats">
-            <div class="stat"><div class="num" data-count="7" data-suffix="+">0</div><div class="lbl">Websites shipped</div></div>
-            <div class="stat"><div class="num" data-count="5000" data-suffix="+">0</div><div class="lbl">Members grown</div></div>
-            <div class="stat"><div class="num" data-count="80" data-suffix="%">0</div><div class="lbl">Effort automated</div></div>
-            <div class="stat"><div class="num" data-count="98" data-suffix="%">0</div><div class="lbl">Annotation accuracy</div></div>
+            <div class="stat"><div class="num" data-count="7" data-suffix="+">7+</div><div class="lbl">Websites shipped</div></div>
+            <div class="stat"><div class="num" data-count="5000" data-suffix="+">5,000+</div><div class="lbl">Members grown</div></div>
+            <div class="stat"><div class="num" data-count="80" data-suffix="%">80%</div><div class="lbl">Effort automated</div></div>
+            <div class="stat"><div class="num" data-count="98" data-suffix="%">98%</div><div class="lbl">Annotation accuracy</div></div>
           </div>
         </div>
       </div>
@@ -371,13 +446,10 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
       <div class="col panel reveal">
         <div class="eyebrow">Capabilities</div>
         <h2 class="big" style="margin-bottom:36px">What I build</h2>
-        <div class="skill-grid">
-          <div class="skill"><h4><i>01</i> Frontend &amp; Web</h4><ul><li>React.js</li><li>HTML/CSS</li><li>Tailwind</li><li>Webflow</li><li>Framer Motion</li></ul></div>
-          <div class="skill"><h4><i>02</i> Backend &amp; APIs</h4><ul><li>Node / Express</li><li>FastAPI</li><li>PostgreSQL</li><li>MongoDB</li><li>JWT Auth</li></ul></div>
-          <div class="skill"><h4><i>03</i> AI &amp; Automation</h4><ul><li>n8n</li><li>OpenAI API</li><li>Chatbots</li><li>Data pipelines</li><li>Python</li></ul></div>
-          <div class="skill"><h4><i>04</i> Bots &amp; Community</h4><ul><li>Discord.js</li><li>Telegram API</li><li>Twilio WhatsApp</li><li>Moderation</li></ul></div>
-          <div class="skill"><h4><i>05</i> Integrations</h4><ul><li>Stripe</li><li>Paystack</li><li>HubSpot</li><li>Mailchimp</li><li>Shopify</li></ul></div>
-          <div class="skill"><h4><i>06</i> Tooling &amp; Deploy</h4><ul><li>Git / CI-CD</li><li>Vercel</li><li>Netlify</li><li>Render</li><li>Railway</li></ul></div>
+        <div class="skill-grid" style="grid-template-columns:repeat(3,1fr)">
+          <div class="skill"><h4><i>01</i> Full-Stack Products</h4><ul><li>React / Next.js</li><li>Node / Express</li><li>FastAPI · Python</li><li>PostgreSQL</li></ul></div>
+          <div class="skill"><h4><i>02</i> AI &amp; Automation</h4><ul><li>n8n pipelines</li><li>OpenAI API</li><li>Chatbots &amp; agents</li><li>Data workflows</li></ul></div>
+          <div class="skill"><h4><i>03</i> Bots &amp; Integrations</h4><ul><li>Discord.js · Telegram</li><li>Stripe · Paystack</li><li>Webhooks / REST</li><li>Vercel · Railway</li></ul></div>
         </div>
       </div>
     </section>
@@ -391,7 +463,10 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
           <div class="t-item batch"><div class="when">2024 — Present · Remote</div><h3>Frontend Developer &amp; Website Builder</h3><div class="where">Freelance / Remote Clients</div><ul><li>Launched 7+ responsive, SEO-ready sites in React, Next.js &amp; Webflow.</li><li>Integrated Stripe, Calendly, Mailchimp &amp; live chat into client stacks.</li><li>Cut average load time ~40% via image optimization, lazy-loading &amp; CDN.</li></ul><div class="t-tags"><span>React</span><span>Next.js</span><span>Webflow</span><span>Stripe</span></div></div>
           <div class="t-item batch"><div class="when">Jan — Jun 2025 · Remote</div><h3>Junior Backend Developer (Contract)</h3><div class="where">Stealth EdTech Startup</div><ul><li>Shipped REST APIs in Node/Express for an LMS serving 300+ students.</li><li>JWT auth, role-based access &amp; refresh-token rotation.</li><li>Raised API test coverage 0% → 74% with Jest &amp; CI checks.</li></ul><div class="t-tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Jest</span></div></div>
           <div class="t-item batch"><div class="when">2023 — Present · Remote</div><h3>Community Builder &amp; Automation Lead</h3><div class="where">Online Tech Community</div><ul><li>Grew an engaged community to 5,000+ members through events &amp; content.</li><li>Built Discord + n8n bots for onboarding, moderation &amp; auto-reminders.</li><li>Automated welcome flows &amp; role assignment, slashing manual mod work.</li></ul><div class="t-tags"><span>Discord</span><span>n8n</span><span>Community Ops</span></div></div>
-          <div class="t-item batch"><div class="when">2024 — 2025 · Remote</div><h3>AI Data Annotation Specialist</h3><div class="where">Telus AI · Appen by CrowdGen</div><ul><li>Annotated large-scale multimodal datasets for LLM training &amp; evaluation.</li><li>Led JSON video annotation (Project Livingstone) at 98%+ accuracy.</li><li>Authored QA guidelines later adopted across the annotation team.</li></ul><div class="t-tags"><span>JSON</span><span>LLM Data</span><span>QA</span></div></div>
+          <details class="t-more batch" style="margin-top:8px;padding-left:34px">
+            <summary style="cursor:pointer;font-size:.78rem;color:var(--muted);letter-spacing:.06em;list-style:none;outline:none;user-select:none">▸ Earlier experience</summary>
+            <div class="t-item" style="margin-top:18px;padding-bottom:0"><div class="when">2024 — 2025 · Remote</div><h3>AI Data Annotation Specialist</h3><div class="where">Telus AI · Appen by CrowdGen</div><ul><li>Annotated large-scale multimodal datasets for LLM training &amp; evaluation.</li><li>Led JSON video annotation (Project Livingstone) at 98%+ accuracy.</li><li>Authored QA guidelines later adopted across the annotation team.</li></ul><div class="t-tags"><span>JSON</span><span>LLM Data</span><span>QA</span></div></div>
+          </details>
         </div>
       </div>
     </section>
@@ -453,6 +528,49 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
       </div>
     </section>
 
+    <section class="sec" id="testimonials" style="padding-top:6vh;padding-bottom:6vh">
+      <div class="col">
+        <div class="eyebrow reveal">Social Proof</div>
+        <h2 class="big reveal" style="margin-bottom:8px">What clients say</h2>
+        <p class="reveal" style="text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:0">Real feedback from people I've built for.</p>
+        <div class="testimonials">
+          <div class="tcard batch">
+            <p class="tcard-quote">Oreoluwa automated our entire client onboarding flow in under a week. What used to take 3 people is now hands-off. The n8n pipelines he built just work — we haven't touched them in months.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">AK</div>
+              <div class="tcard-meta">
+                <span class="tcard-name">Adeyemi K.</span>
+                <span class="tcard-role">Founder, SaaS Startup · Lagos</span>
+                <span class="tcard-stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          <div class="tcard batch">
+            <p class="tcard-quote">Our Discord server went from chaotic to professional overnight. The bots handle onboarding, role assignment, and weekly digests without us lifting a finger. Exactly what we needed for a 5k+ community.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">TN</div>
+              <div class="tcard-meta">
+                <span class="tcard-name">Tunde N.</span>
+                <span class="tcard-role">Community Lead · Tech Community</span>
+                <span class="tcard-stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          <div class="tcard batch">
+            <p class="tcard-quote">We needed an API layer fast. Oreoluwa shipped clean, tested Node/Express endpoints for our LMS in days, not weeks. Coverage went from zero to 74%. Would hire again without hesitation.</p>
+            <div class="tcard-author">
+              <div class="tcard-avatar">EM</div>
+              <div class="tcard-meta">
+                <span class="tcard-name">Emmanuel M.</span>
+                <span class="tcard-role">CTO, EdTech Startup · Remote</span>
+                <span class="tcard-stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="sec contact" id="contact">
       <div class="col">
         <div class="eyebrow reveal">Let's build</div>
@@ -460,14 +578,14 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
         <div class="contact-btns reveal">
           <a class="btn" href="mailto:Oreoluwarexxy15@gmail.com" data-cursor><span>✉️ Email me</span></a>
           <a class="btn" href="https://t.me/Travis_on_sol" target="_blank" rel="noopener" data-cursor style="border-color:rgba(41,182,246,.6)"><span>✈️ Telegram</span></a>
-          <a class="btn" href="https://wa.me/2349157734298" target="_blank" rel="noopener" data-cursor style="border-color:rgba(37,211,102,.6)"><span>📞 WhatsApp</span></a>
+          <a class="btn wa-btn" data-wa="2349157734298" target="_blank" rel="noopener" data-cursor style="border-color:rgba(37,211,102,.6);cursor:pointer"><span>📞 WhatsApp</span></a>
         </div>
         <div class="social reveal">
-          <a href="https://github.com/" data-cursor>GitHub</a>
-          <a href="https://www.linkedin.com/" data-cursor>LinkedIn</a>
+          <a href="https://github.com/u6908704667-art" target="_blank" rel="noopener" data-cursor>GitHub</a>
+          <a href="https://www.linkedin.com/in/oreoluwa-adedeji" target="_blank" rel="noopener" data-cursor>LinkedIn</a>
           <a href="mailto:Oreoluwarexxy15@gmail.com" data-cursor>Email</a>
           <a href="https://t.me/Travis_on_sol" target="_blank" rel="noopener" data-cursor>Telegram</a>
-          <a href="https://wa.me/2349157734298" target="_blank" rel="noopener" data-cursor>WhatsApp</a>
+          <a class="wa-link" data-wa="2349157734298" style="cursor:pointer" data-cursor>WhatsApp</a>
         </div>
       </div>
     </section>
@@ -489,11 +607,11 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
           </div>
           <div class="fcol">
             <h5>Connect</h5>
-            <a href="https://github.com/" data-cursor>GitHub</a>
-            <a href="https://www.linkedin.com/" data-cursor>LinkedIn</a>
+            <a href="https://github.com/u6908704667-art" target="_blank" rel="noopener" data-cursor>GitHub</a>
+            <a href="https://www.linkedin.com/in/oreoluwa-adedeji" target="_blank" rel="noopener" data-cursor>LinkedIn</a>
             <a href="mailto:Oreoluwarexxy15@gmail.com" data-cursor>Email</a>
             <a href="https://t.me/Travis_on_sol" target="_blank" rel="noopener" data-cursor>Telegram</a>
-            <a href="https://wa.me/2349157734298" target="_blank" rel="noopener" data-cursor>WhatsApp</a>
+            <a class="wa-link" data-wa="2349157734298" style="cursor:pointer" data-cursor>WhatsApp</a>
           </div>
           <div class="fcol">
             <h5>Stack</h5>
