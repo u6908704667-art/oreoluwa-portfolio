@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oreoluwa-portfolio-6.vercel.app/sitemap.xml
