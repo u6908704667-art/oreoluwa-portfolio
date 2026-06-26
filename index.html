@@ -24,6 +24,7 @@
 
 <!-- Canonical -->
 <link rel="canonical" href="https://oreoluwa-portfolio-6.vercel.app/" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
 <!-- Favicon — inline SVG (no extra file needed) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23050507'/><text x='16' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='18' fill='%23e9a23b' text-anchor='middle'>OA</text></svg>" />
@@ -34,19 +35,39 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Oreoluwa Adedeji",
+  "alternateName": "Dastrid",
   "jobTitle": "Full-Stack Developer & AI Automation Engineer",
-  "description": "Full-stack developer and AI automation engineer with 4+ years building web apps, AI systems, and automation pipelines.",
+  "description": "Full-stack developer and AI automation engineer with 4+ years shipping production-grade web apps, AI systems and automation pipelines.",
   "url": "https://oreoluwa-portfolio-6.vercel.app/",
   "email": "Oreoluwarexxy15@gmail.com",
+  "image": "https://oreoluwa-portfolio-6.vercel.app/assets/portrait_sq.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Abuja",
     "addressCountry": "NG"
   },
-  "knowsAbout": ["React", "Node.js", "Python", "n8n", "OpenAI API", "FastAPI", "PostgreSQL", "Discord bots", "AI Automation", "REST APIs"],
+  "knowsAbout": [
+    "React", "Next.js", "Node.js", "Express", "Python", "FastAPI",
+    "n8n", "OpenAI API", "AI Automation", "REST APIs", "PostgreSQL",
+    "Discord bots", "Telegram bots", "Stripe", "Paystack",
+    "Biomedical Engineering", "Signal Processing", "Community Building"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Full-Stack Developer",
+    "occupationLocation": { "@type": "Country", "name": "Nigeria" },
+    "skills": "Full-stack development, AI automation, community tooling"
+  },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-Stack Web Development" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Chatbot & Automation Engineering" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Discord & Telegram Bot Development" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "n8n Workflow Automation" } }
+  ],
   "sameAs": [
-    "https://t.me/Travis_on_sol",
-    "https://wa.me/2349157734298"
+    "https://github.com/u6908704667-art",
+    "https://www.linkedin.com/in/oreoluwa-adedeji",
+    "https://t.me/Travis_on_sol"
   ]
 }
 </script>
@@ -417,9 +438,9 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
           </div>
           <div class="about-copy">
             <div class="eyebrow" style="justify-content:flex-start">About</div>
-            <p class="lead" style="text-align:left">Engineer by training. Builder by nature. I'm finishing a <b>Biomedical Engineering degree</b> while having already spent <b>4+ years</b> shipping real products — full-stack apps, AI systems, and automation infrastructure that runs in production.</p>
-            <p class="about-sub">That combination is rare. I understand how complex systems behave at a deep level — signal processing, data pipelines, precision engineering — and I apply that same rigour to software: REST APIs, AI-powered bots, n8n automation pipelines, Discord &amp; Telegram community tooling, and multi-platform integrations, all built to actually hold under load.</p>
-            <p class="about-sub" style="margin-top:10px">I've cut client support tickets by 60%, automated 80% of repetitive ops, and grown an online community to 5,000+ members. I don't just write code — I solve the problem behind the problem. Currently freelancing remotely — open to ambitious work worldwide.</p>
+            <p class="lead" style="text-align:left">I'm finishing a <b>Biomedical Engineering degree</b> while having already spent <b>4+ years</b> shipping real products: full-stack apps, AI systems and automation infrastructure that runs in production.</p>
+            <p class="about-sub">That background shapes how I work. Understanding complex systems at a deep level — signal processing, data pipelines, precision engineering — means I bring that same rigour to software. REST APIs, AI-powered bots, n8n automation pipelines, Discord and Telegram community tooling, multi-platform integrations: all built to hold under load.</p>
+            <p class="about-sub" style="margin-top:10px">I've cut client support tickets by 60%, automated 80% of repetitive ops and grown an online community to 5,000+ members. I don't just write code. I solve the problem behind the problem. Currently freelancing remotely and open to ambitious work worldwide.</p>
           </div>
         </div>
       </div>
@@ -634,5 +655,9 @@ h2.big{font-size:clamp(1.9rem,6vw,4.4rem);font-weight:700;letter-spacing:-.03em;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="main.js"></script>
+  <!-- Vercel Analytics — tracks visitors, page views, top sections -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Speed Insights — Core Web Vitals monitoring -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
