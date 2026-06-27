@@ -392,6 +392,7 @@ addEventListener('load', () => {
   runPreloader();
   initAnimations();
   initWhatsApp();
+  initContactForm();
 });
 
 /* ─────────────────────────────────────────
@@ -406,5 +407,48 @@ function initWhatsApp(){
       const n = el.getAttribute('data-wa');
       window.open(prefix + n, '_blank', 'noopener,noreferrer');
     });
+  });
+}
+
+/* ─────────────────────────────────────────
+   CONTACT FORM — Web3Forms async submit
+   No backend needed. Replace access_key with
+   your key from web3forms.com (free).
+───────────────────────────────────────── */
+function initContactForm(){
+  const form   = document.getElementById('contactForm');
+  const btn    = document.getElementById('cfSubmit');
+  const label  = document.getElementById('cfBtnText');
+  const status = document.getElementById('cfStatus');
+  if(!form) return;
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    btn.disabled = true;
+    label.textContent = 'Sending…';
+    status.textContent = '';
+    status.className = 'cform-status';
+
+    try {
+      const data = new FormData(form);
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+      if(json.success){
+        status.textContent = '✓ Message sent — I\'ll get back to you within 24 hours.';
+        status.classList.add('ok');
+        form.reset();
+      } else {
+        throw new Error(json.message || 'Submit failed');
+      }
+    } catch(err){
+      status.textContent = '✗ Something went wrong. Email me directly at Oreoluwarexxy15@gmail.com';
+      status.classList.add('err');
+    } finally {
+      btn.disabled = false;
+      label.textContent = 'Send message →';
+    }
   });
 }
